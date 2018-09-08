@@ -1,7 +1,21 @@
 language: node_js
 node_js:
   - "8"
-cache: yarn
+cache:
+  yarn: true
+  directories:
+    - node_modules
+install:
+  - yarn
 script:
-  - npm run build
-  - npm run test
+  - yarn test
+jobs:
+  include:
+    - stage: release
+      node_js: 8
+      script: skip
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+          - npx semantic-release
