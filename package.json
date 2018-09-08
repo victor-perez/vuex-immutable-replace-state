@@ -29,6 +29,7 @@
     "eslint-plugin-jest": "^21.22.0",
     "jest": "^23.5.0",
     "microbundle": "^0.6.0",
+    "rimraf": "^2.6.2",
     "vue": "^2.5.17",
     "vuex": "^3.0.1",
     "vuex-persistedstate": "^2.5.4"
@@ -60,7 +61,7 @@
   ],
   "scripts": {
     "test": "jest",
-    "build": "microbundle --name vuexImmutableReplaceState src/index.js",
+    "build": "rimraf dist && microbundle --name vuexImmutableReplaceState src/index.js",
     "prepublish": "yarn build"
   }
 }
