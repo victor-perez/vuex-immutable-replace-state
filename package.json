@@ -1,0 +1,63 @@
+{
+  "name": "vuex-immutable-replace-state",
+  "version": "1.0.0",
+  "description": "Vuex replace state plugin to correctly handle state replacement when uses immutables states",
+  "main": "dist/vuex-immutable-replace-state.js",
+  "module": "dist/vuex-immutable-replace-state.es.js",
+  "jsnext:main": "dist/vuex-immutable-replace-state.es.js",
+  "umd:main": "dist/vuex-immutable-replace-state.umd.js",
+  "license": "Apache-2.0",
+  "author": "V.A. Perez <js@victor-perez.nl>",
+  "bugs": {
+    "url": "https://github.com/victor-perez/vuex-immutable-replace-state/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/victor-perez/vuex-immutable-replace-state.git"
+  },
+  "homepage": "https://github.com/victor-perez/vuex-immutable-replace-state",
+  "dependencies": {
+    "immutable": "^3.8.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.4.2",
+    "babel-preset-env": "^1.7.0",
+    "dom-storage": "^2.1.0",
+    "eslint": "^5.5.0",
+    "eslint-plugin-jest": "^21.22.0",
+    "jest": "^23.5.0",
+    "microbundle": "^0.6.0",
+    "vue": "^2.5.17",
+    "vuex": "^3.0.1",
+    "vuex-persistedstate": "^2.5.4"
+  },
+  "peerDependencies": {
+    "vue": "^2.0.0",
+    "vuex": "^2.0.0 || ^3.0.0"
+  },
+  "files": [
+    "dist",
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "ie 11",
+    "not ie <= 8"
+  ],
+  "keywords": [
+    "vue",
+    "vuex",
+    "plugin",
+    "immutable"
+  ],
+  "scripts": {
+    "test": "jest",
+    "build": "microbundle --name vuexImmutableReplaceState src/index.js",
+    "prepublish": "yarn build"
+  }
+}
