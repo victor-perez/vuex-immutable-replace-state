@@ -7,6 +7,7 @@ Any plugin that uses `Store.replaceState` like [vuex-persistedstate](https://git
 
 
 [![NPM version](https://img.shields.io/npm/v/vuex-immutable-replace-state.svg)](https://www.npmjs.com/package/vuex-immutable-replace-state)
+[![Build Status](https://travis-ci.org/victor-perez/vuex-immutable-replace-state.svg?branch=master)](https://travis-ci.org/victor-perez/vuex-immutable-replace-state)
 
 [![NPM](https://nodei.co/npm/vuex-immutable-replace-state.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vuex-immutable-replace-state/)
 
