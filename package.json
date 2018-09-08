@@ -34,7 +34,7 @@
     "vuex-persistedstate": "^2.5.4"
   },
   "engines": {
-    "node": ">8"
+    "node": ">=8"
   },
   "peerDependencies": {
     "vue": "^2.0.0",
