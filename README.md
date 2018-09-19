@@ -27,13 +27,19 @@ $ npm install vuex-immutable-replace-state
 ```
 
 ## Usage
-This plugin will **only** replace the first level of the state
+
+### options object
+| property | type | version | default | description  |
+|---|---|---|---| ---|
+| `deep`| boolean | `false` | ^1.1.0 | if set to `true` it will do a deep replace of immutables |
+
+By default it will **only** replace the first level of the state
 ```javascript
-//will work
+//default
 const state = {
     todo: new List()
 }
-//will not work
+//will only work with {deep: true}
 const state = {
     today: {
         done: new List (),
@@ -42,6 +48,7 @@ const state = {
 }
 ```
 
+## Examples
 
 ```javascript
 import vuexImmutableReplaceState from "vuex-immutable-replace-state";
@@ -55,6 +62,31 @@ const store = new Vuex.Store({
     },
     plugins: [
         vuexImmutableReplaceState(), //first 
+        createPersistedState()
+    ]
+});
+
+````
+
+when working with modules `{deep: true}` is required
+
+```javascript
+import vuexImmutableReplaceState from "vuex-immutable-replace-state";
+import createPersistedState from "vuex-persistedstate";
+
+import { List, Map } from 'immutable'
+
+const store = new Vuex.Store({
+    state: {
+        todo: new List() //this is important
+        module: {
+            a: {
+                state: new Map()
+            }
+        }
+    },
+    plugins: [
+        vuexImmutableReplaceState({deep: true}), //deep true 
         createPersistedState()
     ]
 });

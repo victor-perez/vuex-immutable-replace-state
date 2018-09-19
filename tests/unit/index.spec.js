@@ -1,10 +1,6 @@
 import { List, Map, OrderedMap, Set, OrderedSet, Stack, Seq } from 'immutable';
 import Store from '../store';
-
-function jsonCopy(value) {
-    return JSON.parse(JSON.stringify(value));
-}
-
+import { jsonCopy } from '../helpers';
 
 describe('Test all immutable types ', () => {
 
