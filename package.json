@@ -1,6 +1,6 @@
 {
   "name": "vuex-immutable-replace-state",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Vuex replace state plugin to correctly handle state replacement when uses immutables states",
   "main": "dist/vuex-immutable-replace-state.js",
   "module": "dist/vuex-immutable-replace-state.es.js",
